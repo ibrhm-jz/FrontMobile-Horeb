@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'widgets/AppBar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'styles/my_icons.dart';
+import 'widgets/Drawer.dart';
 
 class Materiales extends StatefulWidget {
   Materiales({Key key, this.title}) : super(key: key);
@@ -28,6 +29,7 @@ class _MaterialesState extends State<Materiales>
     return Scaffold(
         key: _scaffoldKey,
         backgroundColor: Colors.white,
+        drawer: DrawerSettings(context),
         appBar: AppbarHome(_scaffoldKey, widhtScreen, context),
         body: Container(
             margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
