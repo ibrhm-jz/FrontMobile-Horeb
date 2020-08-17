@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'styles/my_icons.dart';
 import 'widgets/Drawer.dart';
 
-class Materiales extends StatefulWidget {
-  Materiales({Key key, this.title}) : super(key: key);
+class Productos extends StatefulWidget {
+  Productos({Key key, this.title}) : super(key: key);
 
   final String title;
 
@@ -13,7 +13,7 @@ class Materiales extends StatefulWidget {
   _MaterialesState createState() => _MaterialesState();
 }
 
-class _MaterialesState extends State<Materiales>
+class _MaterialesState extends State<Productos>
     with SingleTickerProviderStateMixin {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   void initState() {
@@ -41,7 +41,7 @@ class _MaterialesState extends State<Materiales>
                   child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Materiales',
+                        'Productos',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 35,

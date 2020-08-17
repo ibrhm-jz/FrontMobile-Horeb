@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Start.dart';
 import 'Clientes.dart';
-import 'Materiales.dart';
+import 'Productos.dart';
+import 'Cotizacion.dart';
 
 
 class BotomMenuWidget extends StatefulWidget {
@@ -17,7 +18,8 @@ class _BotomMenuWidgetState extends State<BotomMenuWidget> {
   List<Widget> _widgetOptions = <Widget>[
       Start(),
       Clientes(),
-      Materiales(),
+      Productos(),
+      Cotizacion(),
     //PerfilProveedorPage()
   ];
 

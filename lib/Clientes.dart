@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/AppBar.dart';
+import 'widgets/Drawer.dart';
 
 class Clientes extends StatefulWidget {
   Clientes({Key key, this.title}) : super(key: key);
@@ -18,6 +19,7 @@ class _ClientesState extends State<Clientes> {
     double heigthScreen = MediaQuery.of(context).size.height;
     return Scaffold(
         key: _scaffoldKey,
+        drawer: DrawerSettings(context),
         backgroundColor: Colors.white,
         appBar: AppbarHome(_scaffoldKey, widhtScreen, context),
         body: Container(

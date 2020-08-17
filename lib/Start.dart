@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/AppBar.dart';
-
+import 'widgets/Drawer.dart';
 class Start extends StatefulWidget {
   Start({Key key, this.title}) : super(key: key);
 
@@ -19,6 +19,7 @@ class _StartState extends State<Start> {
     return Scaffold(
         backgroundColor: Colors.white,
         key: _scaffoldKey,
+        drawer: DrawerSettings(context),
         appBar: AppbarHome(_scaffoldKey, widhtScreen, context),
         body: Container(
             color: Colors.white,
