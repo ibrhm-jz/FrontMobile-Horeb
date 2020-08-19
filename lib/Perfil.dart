@@ -41,7 +41,7 @@ class _PerfilState extends State<Perfil> {
       body: Container(
           color: Colors.white,
           //margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
-          child: Expanded(
+          child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
                 Container(
@@ -113,7 +113,7 @@ class _PerfilState extends State<Perfil> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                  margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: TextField(
                     decoration: new InputDecoration(
                       hintText: "Direccion",

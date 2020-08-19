@@ -161,7 +161,7 @@ class _EmpleadosState extends State<Empleados> {
         child: RaisedButton(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
           onPressed: () {},
-          child: Text("Editar",
+          child: Text("Agregar",
               style: TextStyle(fontSize: 14, color: Colors.white)),
           color: Color.fromRGBO(0, 182, 134, 1),
         ),
