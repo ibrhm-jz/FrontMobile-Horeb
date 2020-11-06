@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'widgets/AppBar.dart';
 import 'widgets/Drawer.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
 
 class Empleados extends StatefulWidget {
   Empleados({Key key, this.title}) : super(key: key);
@@ -12,6 +15,8 @@ class Empleados extends StatefulWidget {
 }
 
 class _EmpleadosState extends State<Empleados> {
+  static List dataEmpleados;
+
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'BotomMenu.dart';
+import 'api/Login.dart';
 class Login extends StatefulWidget {
   Login({Key key, this.title}) : super(key: key);
 
@@ -10,6 +11,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,6 +81,7 @@ class _LoginState extends State<Login> {
                                   child: Container(
                                     margin: EdgeInsets.fromLTRB(0, 0, 0, 5),
                                     child: TextFormField(
+                                      controller: _emailController,
                                       autofocus: true,
                                       //controller: _presentacionController,
                                       decoration: InputDecoration(
@@ -133,7 +137,7 @@ class _LoginState extends State<Login> {
                                     child: TextFormField(
                                       autofocus: true,
                                       obscureText: true,
-                                      //controller: _presentacionController,
+                                      controller: _passwordController,
                                       decoration: InputDecoration(
                                         //contentPadding: EdgeInsets.fromLTRB(5, 40, 0, 0),
 
@@ -175,12 +179,9 @@ class _LoginState extends State<Login> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10)),
                                   onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => BotomMenuWidget()
-                                        )
-                                    );
+                                   //SystemChannels.textInput.invokeMethod('TextInput.hide');
+                                    requestLoginAPI(context, _emailController.text, _passwordController.text);
+
                                   },
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
